@@ -1,0 +1,55 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <a href="/">home</a>
+        <a href="/login">login</a>
+        <a href="/register">register</a>
+        <a href="/about">about</a>
+    </div>
+
+    <br>
+
+    <form action="/signin" method="POST">
+        <input type="text" name="email" placeholder="email" id="">
+        <br>
+        <input type="text" placeholder="password" name="password" id="">
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    
+        <h1> Users </h1>
+
+        <ul class="">
+             <!-- Loop through quotes -->
+            <% for(var i = 0; i < users.length; i++) {%>
+                <li class="quote">
+                    <!-- Output name from the iterated quote object -->
+                    <span><%= users[i].email %></span>:
+                    <!-- Output quote from the iterated quote object -->
+                    <span><%= users[i].password %></span>
+                </li>
+            <% } %>
+        </ul>
+        <div>
+            <h2>replace first item</h2>
+            <button id="update-button">Replace item</button>
+          </div>
+
+          <div>
+            <h2>Remove</h2>
+            </p>
+            <button id="delete-button">Delete</button>
+          </div>
+
+          <script src="/js/script.js"></script>
+    
+</body>
+</html>
