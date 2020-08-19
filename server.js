@@ -4,7 +4,7 @@ const cors = require('cors');
 const bp = require('body-parser');
 const fs = require('fs');
 const path = require('path');
-const connectionString = 'mongodb+srv://admin:firstapp@cluster0.paqpn.mongodb.net/test?retryWrites=true&w=majority';
+const connectionString = '';
 
 const MongoClient = require('mongodb').MongoClient
 
